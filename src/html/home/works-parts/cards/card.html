@@ -1,0 +1,25 @@
+<div
+	class="works__card card-works @@additionalClasses"
+	data-work-card
+	data-work-id="@@data-work-id"
+	data-work-name="@@data-work-name"
+	data-work-content-media="@@page-media"
+	data-work-content-media-type="@@typeMedia"
+	data-work-content-title="@@title"
+	data-work-content-subtitle="@@bottom-title"
+	onclick="ym(97913250,'reachGoal', '@@metrik-name')"
+>
+	<div class="card-works__wrapper tap-animation">
+		<div class="card-works__media">
+			@@if(context.typeMedia === 'video') {<video src=@@media autoplay loop muted playsinline></video> }
+			@@if(context.typeMedia === 'img') {<img src="@@media" alt="page" /> }
+		</div>
+		<h6 class="card-works__title">@@title</h6>
+		<div class="card-works__bottom">
+			<div class="card-works__bottom-title">@@bottom-title</div>
+			<div class="card-works__bottom-icon">
+				<img src="@@icon" alt="" />
+			</div>
+		</div>
+	</div>
+</div>

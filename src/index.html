@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	@@include('html/components/head.html',{ "title":"AX DIGITAL","path":"." })
+
+	<body class="home hide-loader">
+		<script async>
+			const HASH = window.location.hash.slice(1);
+			if (!HASH) {
+				document.body.classList.remove('hide-loader');
+			}
+		</script>
+		@@include('html/components/portrait.html')
+		@@include('html/components/preloader.html')
+		@@include('html/components/header.html') @@include('html/home/intro.html')
+		@@include('html/components/popup-video.html')
+		<div class="about__wrapper-stiky">
+			@@include('html/home/about/about-desc.html')
+			@@include('html/home/about/about-bg.html')
+			@@include('html/home/about/about-mob.html')
+		</div>
+		@@include('html/home/works.html', {"page": "main"})
+		@@include('html/home/directions.html')
+		@@include('html/components/footer.html')
+		<!-- @@include('html/components/popup-contact.html') -->
+		<!-- <div class="shadow"></div> -->
+		<!-- <div class="header__language-shadow"></div> -->
+		@@include('html/components/shadow.html')
+		@@include('html/components/cursor.html')
+		@@include('html/home/works-parts/preloader.html')
+		<script src="./js/app.min.js"></script>
+	</body>
+</html>

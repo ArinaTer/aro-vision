@@ -1,0 +1,242 @@
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+  overflow-y: scroll;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+html {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1820px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 248px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--light-color);
+  mask-repeat: no-repeat;
+
+  @include _1559-max {
+    font-size: 180px;
+  }
+  @include _1399-max {
+    font-size: 152px;
+  }
+
+  @include _991-max {
+    font-size: 110px;
+  }
+
+  @include _767-max {
+    font-size: 84px;
+  }
+
+  @include _479-max {
+    font-size: 64px;
+  }
+}
+
+.sub-title {
+  color: var(--orange-color);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+
+  @include _479-max {
+    font-size: 20px;
+  }
+}
+
+// Input AutoFill Styles
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:active,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:active,
+select:-webkit-autofill:focus {
+  color: #fff !important; // какого цвета должен быть текст
+  -webkit-text-fill-color: #fff !important; // какого цвета должен быть текст
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+input,
+textarea,
+select {
+  &:focus-visible {
+    outline: 0;
+    border: 0;
+  }
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  @include flex();
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid var(--light-color);
+  width: 192px;
+  width: 100%;
+  // padding: 24px;
+  height: 64px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  background-color: black;
+  overflow: hidden;
+  //   pointer-events: none;
+  //   opacity: 0;
+  @include _767-max {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    &:first-child {
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(2) {
+      transform: translate(-50%, 100%);
+    }
+
+    // height: 10px;
+  }
+
+  color: var(--light-color);
+  transition:
+    background-color 0.3s ease,
+    filter 0.3s ease;
+
+  @include _2880-min {
+    font-size: 16px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+
+      & span {
+        svg,
+        img {
+          filter: invert(1);
+        }
+      }
+
+      span:first-child {
+        transform: translate(-50%, -200%);
+      }
+      span:nth-child(2) {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  @include _479-max {
+    padding: 20px 24px;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+    z-index: 2;
+    @include _767-max {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    @include _767-max {
+      // width: 100%;
+    }
+    // background-color: teal;
+  }
+}
+
+
+@include _767-max {
+  * {
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Webkit (Safari/Chrome) */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  /* Prevent image selection */
+  img {
+    user-select: none; /* Standard syntax */
+    -webkit-user-drag: none; /* Webkit (Safari/Chrome) */
+    -webkit-user-select: none; /* Webkit (Safari/Chrome) */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    // pointer-events: none; /* Disables interactions */
+  }
+  
+  a {
+    -webkit-user-drag: none; /* Для браузеров на основе WebKit */
+    user-drag: none;
+  }
+}

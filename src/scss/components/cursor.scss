@@ -1,0 +1,58 @@
+// .intro__cursor
+.intro {
+  &__cursor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    padding: 10px 20px;
+
+    &.mouse-enter {
+      opacity: 1;
+      visibility: visible;
+    }
+    &-text {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: var(--font);
+      font-size: 20px;
+      font-style: normal;
+      white-space: nowrap;
+      font-weight: 400;
+      line-height: 29.739px;
+      // height: 10vh;
+      // aspect-ratio: 1/1;
+      background: linear-gradient(276deg, #f37c57 34.4%, #fcd2a1 162.71%),
+        #d9d9d9;
+      border-radius: 100px;
+      gap: 10px;
+      z-index: 2;
+      // border-radius: 50%;
+      transform: scale(0.5);
+      opacity: 0;
+      transition: all 0.3s ease;
+      padding: 10px 20px;
+      .mouse-enter & {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}

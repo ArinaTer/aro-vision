@@ -1,0 +1,18 @@
+<div class='lifestyle__img tap-animation @@class'>
+
+    @@if (context.typeMedia === 'video') {
+    <a class="lifestyle-video" data-fancybox="gallery"
+        href="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/gallery/Vid/@@media">
+        <video loop muted autoplay playsinline
+            src="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/gallery/Vid/@@mini-media"></video>
+    </a>
+    }
+
+    @@if (context.typeMedia === 'img') {
+    <a class="lifestyle-img" data-fancybox="gallery"
+        href=https://d3b6muno9lbfvx.cloudfront.net/ax-digital/gallery/Pic/@@media>
+        <img src=https://d3b6muno9lbfvx.cloudfront.net/ax-digital/gallery/Pic/@@mini-media alt="" />
+    </a>
+    }
+
+</div>

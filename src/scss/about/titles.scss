@@ -1,0 +1,13 @@
+.title-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: var(--vh);
+	&__sticky {
+		position: sticky;
+	}
+	@include _767-max {
+    position: static;
+    height: auto;
+  }
+}

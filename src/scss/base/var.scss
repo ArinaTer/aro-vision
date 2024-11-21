@@ -1,0 +1,28 @@
+:root {
+    --vh: 100lvh;
+
+    // Font Family
+    --font: "Montserrat", sans-serif;
+
+    // Colors
+    --light-color: #fff;
+    --dark-color: #000;
+    --orange-color: #f37c57;
+    --grey-color: #757575;
+
+    // Element Colors
+    --input-border: #191919;
+
+    // Gradients
+    // --header-border: ;
+    --text-gradient: linear-gradient(0deg, #f37c57 1.35%, #fcd2a1 99%);
+    --btn-gradient: linear-gradient(324deg, #f37c57 20.41%, #fcd2a1 99%);
+
+    --main-scrollBar: #161616;
+    --popup-scrollBar: #353535;
+
+    // Hover
+    --button-gradient-hover: linear-gradient(324deg, #f37c57 20.41%, #fcd2a1 99%);
+    // Header
+    --header-height: 112px;
+}

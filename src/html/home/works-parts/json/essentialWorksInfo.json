@@ -1,0 +1,112 @@
+[
+    {
+        "metrik-name": "beyond perfection",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/best-renders/renders-collection-mini.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/best-renders/renders-collection-cover.jpg",
+        "title": "Beyond Perfection",
+        "bottom-title": "Renders Gallery",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "always",
+        "data-work-name": "best-gallery"
+    },
+
+    {
+        "metrik-name": "keturah resort pano",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/keturah-resort/img/Cover1-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/keturah-resort/img/Cover1.jpg",
+        "title": "KETURAH RESORT",
+        "bottom-title": "Exclusive project",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "Exclusive project",
+        "data-work-name": "keturah-resort"
+    },
+    {
+        "metrik-name": "ember",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/ember/img/Cover1-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/ember/img/Cover1.jpg",
+        "title": "Ember",
+        "bottom-title": "Template",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "Template",
+        "data-work-name": "ember"
+    },
+    {
+        "metrik-name": "emaar bechfront",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/emaar-beachfront-vr/img/Cover-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/emaar-beachfront-vr/img/Cover.jpg",
+        "title": "Emaar Beachfront",
+        "bottom-title": "AR/VR",
+        "icon": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/cards-icons/pano2vr.svg",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "AR/VR",
+        "data-work-name": "beachfront-vr"
+    },
+
+    {
+        "metrik-name": "sls residences",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/3d-visualization/sls-residence-3d/img/Cover-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/3d-visualization/sls-residence-3d/img/Cover.jpg",
+        "title": "SLS Residences",
+        "bottom-title": "3D visualization",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "3D visualization",
+        "data-work-name": "sls-residences-3d"
+    },
+    {
+        "metrik-name": "downtown terraces",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/downtown-terraces-360/img/cover1-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/downtown-terraces-360/img/cover1.jpg",
+        "title": "Downtown Terraces",
+        "bottom-title": "AR/VR",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "AR/VR",
+        "data-work-name": "downtown-terraces-360"
+    },
+    {
+        "metrik-name": "terraces marasi 3d",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/3d-visualization/terraces-marasi-drive-3d/img/Cover-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/3d-visualization/terraces-marasi-drive-3d/img/Cover.jpg",
+        "title": "Terraces Marasi Drive",
+        "bottom-title": "3D visualization",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "3D visualization",
+        "data-work-name": "terraces-marasi-drive-3d"
+    },
+    {
+        "metrik-name": "keturah reserve pano",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/keturah-reserve/img/main-min2.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/keturah-reserve/img/main2.jpg",
+        "title": "KETURAH RESERVE",
+        "bottom-title": "Exclusive project",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "Exclusive project",
+        "data-work-name": "keturah-reserve"
+    },
+	{
+        "metrik-name": "aurora",
+        "media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/aurora/img/Cover-min.jpg",
+        "page-media": "https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/aurora/img/Cover.jpg",
+        "title": "Aurora",
+        "bottom-title": "Template",
+        "icon": "",
+        "additionalClasses": "essential",
+        "typeMedia": "img",
+        "data-work-id": "Template",
+        "data-work-name": "aurora"
+    }
+]

@@ -1,0 +1,70 @@
+:root {
+  --c-active: #f37c57;
+  --c-active-inner: #000000;
+  --c-default: #d2d6e9;
+  --c-default-dark: #c7cbdf;
+  --c-black: #1b1b22;
+}
+//========================================================================================================================================================
+
+.my-radio {
+  &__item {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease 0s;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 13px;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      background-color: black;
+      background-color: transparent;
+    }
+    &.active,
+    .skills-open-card &,
+    .active & {
+      background-color: var(--c-active);
+    }
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    svg {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      pointer-events: none;
+      fill: var(--c-active-inner);
+      transform: scale(1.01) translateZ(0);
+      --top-y: 0;
+      --dot-y: -17px;
+      --drop-y: -14px;
+      --top-s-x: 1.75;
+      --top-s-y: 1;
+      .top {
+        transform-origin: 12px -12px;
+        transform: translateY(var(--top-y))
+          scale(var(--top-s-x), var(--top-s-y)) translateZ(0);
+      }
+      .dot {
+        transform: translateY(var(--dot-y)) translateZ(0);
+      }
+      .drop {
+        transform: translateY(var(--drop-y)) translateZ(0);
+      }
+    }
+
+    @include _767-max {
+      scale: 0.7;
+    }
+  }
+}

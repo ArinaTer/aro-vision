@@ -1,0 +1,44 @@
+[
+    {
+        "metrik-filter": "filter",
+        "text": "Matterport",
+        "query": "Matterport",
+        "spareClass": "dropdown-works__item_hide"
+    },
+    {
+        "metrik-filter": "filter templates",
+        "text": "Templates",
+        "query": "Template",
+        "spareClass": ""
+    },
+    {
+        "metrik-filter": "filter 3d",
+        "text": "3D visualizations",
+        "query": "3D visualization",
+        "spareClass": ""
+    },
+    {
+        "metrik-filter": "filter",
+        "text": "Video production",
+        "query": "Video production",
+        "spareClass": "dropdown-works__item_hide"
+    },
+    {
+        "metrik-filter": "filter",
+        "text": "Branding",
+        "query": "Branding",
+        "spareClass": "dropdown-works__item_hide"
+    },
+    {
+        "metrik-filter": "filter ar vr",
+        "text": "AR/VR solutions",
+        "query": "AR/VR",
+        "spareClass": ""
+    },
+    {
+        "metrik-filter": "filter exclusive",
+        "text": "Exclusive projects",
+        "query": "Exclusive project",
+        "spareClass": ""
+    }
+]

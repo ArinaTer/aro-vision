@@ -1,0 +1,131 @@
+.preloader-work {
+	--shift: 50px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	.mob-device & {
+		height: 100lvh;
+	}
+	will-change: transform;
+	top: 0;
+	left: 0;
+	z-index: 30000;
+	overflow: hidden;
+	background-color: var(--dark-color);
+	transform: translateY(100%);
+	pointer-events: none;
+	transition: transform 0s;
+	.show-work-preloader-no-transition & {
+		transform: translateY(0);
+	}
+	.show-work-preloader & {
+		transition: transform 0.7s;
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+	.work-preloader-hide & {
+		transform: translateY(-100%);
+		transition: transform 0.7s;
+	}
+
+	// .preloader-work__wrapper
+
+	&__wrapper {
+		.hide & {
+			transition: opacity 0.3s;
+			opacity: 0;
+		}
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		.mob-device & {
+			height: calc(100% - var(--shift));
+		}
+		top: 0;
+		left: 0;
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	// .preloader-work__body
+
+	&__body {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		padding-bottom: 28vh;
+		.skills-page & {
+			// padding-bottom: 28dvh;
+		}
+		@media (max-height: 800px) and (max-width: 545px) {
+			// padding-bottom: 26vh;
+		}
+		// @media (max-height: 667px) and (max-width: 545px) {
+		// 	padding-bottom: 24vh;
+		// }
+		color: #fff;
+		font-size: 24px;
+		font-weight: 500;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		// top: calc((var(--shift) - 30px) * -1);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		@include _767-max {
+			font-size: 20px;
+		}
+	}
+
+	// .preloader-work__total
+
+	&__total {
+	}
+
+	// .preloader-work__cover-body
+
+	&__cover-body {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .preloader-work__cover
+
+	&__cover {
+		flex-shrink: 0;
+		// width: calc(min(100vh, 100vw) * 0.3);
+		height: 30%;
+		aspect-ratio: 1/1;
+		background: linear-gradient(
+			90deg,
+			transparent 1%,
+			rgba(0, 0, 0, 0.7) 9.84%,
+			#000 49.39%
+		);
+		// background-color: red;
+	}
+}
+.page-sizes {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	color: black;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}

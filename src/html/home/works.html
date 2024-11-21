@@ -1,0 +1,54 @@
+<section class="works">
+	<div class="works__container">
+		<div class="works__title-wrapper">
+			<div class="works__title">
+				<h2>Works</h2>
+			</div>
+		</div>
+
+		<div class="works__info info-works works-ani-top">
+			<!-- <div class="info-works__ghost"></div> -->
+			@@if(page === 'main') { @@include("./works-parts/vijimka.html") }
+			@@if(page === 'inner') { @@include("./works-parts/infoText.html") }
+		</div>
+		@@include("./works-parts/dropdown.html")
+		<div class="works__cards">
+			<div class="works__cards-container">
+				@@include("./works-parts/cards/allCards.html")
+				<!-- @@if(page === 'main') { @@include("./works-parts/cards/essentialCards.html") }
+				@@if(page === 'inner') { @@include("./works-parts/cards/allCards.html") } -->
+			</div>
+			@@if(page === 'main') {
+			<div class="works__cards-container works__cards-container_seemore">
+				@@include("./works-parts/cards/shadowCards.html")
+				<div class="works__cards-see-more see-more-works">
+					<div class="see-more-works__btn">
+						<div class="arrow-btn__wrapper tap-animation">
+							<div class="arrow-btn__container">
+								<a href="/works" class="arrow-btn">
+									<span>
+										See More
+										<img src="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/icons/arrow-link.svg"
+											alt="" />
+									</span>
+									<span>
+										See More
+										<img src="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/icons/arrow-link.svg"
+											alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="see-more-works__blur">
+						<img src="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/works/blur.png" alt="blur">
+					</div>
+				</div>
+			</div>
+			}
+		</div>
+		<div class="works__shadow"></div>
+	</div>
+	@@include("./works-parts/works-iframe.html")
+	<div class="works__black"></div>
+</section>

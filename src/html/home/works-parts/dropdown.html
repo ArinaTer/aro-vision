@@ -1,0 +1,17 @@
+<div class="works__dropdown dropdown-works works-ani-top">
+	<div class="dropdown-works__container" data-dropdown>
+		<div class="dropdown-works__active-item">
+			<p class="dropdown-works__active-item_text" data-dropdown-active="All">
+				Recent
+			</p>
+			<div class="dropdown-works__active-item_icon">
+				<img src="https://d3b6muno9lbfvx.cloudfront.net/ax-digital/icons/works/dropdown-arrow.svg"
+					alt="dropdown-arrow" />
+			</div>
+		</div>
+		<ul class="dropdown-works__items" data-dropdown-list>
+			<li class="dropdown-works__item dropdown-works__item_ghost"></li>
+			@@loop("./dropdown-item.html","html/home/works-parts/json/dropdown.json")
+		</ul>
+	</div>
+</div>

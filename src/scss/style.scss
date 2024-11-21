@@ -1,0 +1,49 @@
+//Font
+@import "../files/fonts/font.css";
+
+// Base
+@import "base/var";
+@import "base/reset";
+@import "base/mixin";
+@import "base/libs";
+@import "base/common";
+
+// Components
+@import "components/preloader";
+@import "components/header";
+@import "components/footer";
+@import "components/popups";
+@import "components/popup-video";
+@import "components/cursor";
+@import "components/tapAnimation";
+@import "components/radio";
+@import "components/successfully";
+@import "components/cookie";
+@import "components/portrait";
+
+// Home Sections
+@import "home/intro";
+@import "home/works";
+@import "home/about";
+@import "home/direction";
+
+// About
+@import "about/imagination";
+@import "about/specialists";
+@import "about/lifestyle";
+@import "about/titles";
+
+// Skilss
+@import "skills/skills";
+
+//career
+@import "career/career";
+@import "career/career-card";
+
+// Privacy
+@import "privacy/privacy";
+
+
+.hide-hard-hide{
+  display: none !important;
+}

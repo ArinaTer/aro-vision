@@ -1,0 +1,68 @@
+@mixin flex($jc: center, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin _2880-min {
+    @media (min-width: 2880px) {
+        @content;
+    }
+}
+
+@mixin _1980-min {
+    @media (min-width: 1980px) {
+        @content;
+    }
+}
+
+@mixin _1559-max {
+    @media (max-width: 1559.98px) {
+        @content;
+    }
+}
+
+@mixin _1479-max {
+    @media (max-width: 1479.98px) {
+        @content;
+    }
+}
+
+@mixin _1399-max {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+@mixin _1199-max {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+@mixin _991-max {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+@mixin _767-max {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+@mixin _576-max {
+    @media (max-width: 576.98px) {
+        @content;
+    }
+}
+
+@mixin _479-max {
+    @media (max-width: 479.98px) {
+        @content;
+    }
+}
+
+@mixin _420-max {
+    @media (max-width: 419.98px) {
+        @content;
+    }
+}

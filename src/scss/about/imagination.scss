@@ -1,0 +1,256 @@
+.imagination {
+	--deleay: 1.2s;
+	--duration: 0.8s;
+	--title-top: 145px;
+	margin-bottom: 80px;
+
+	@media (max-width: 1570px) {
+		--title-top: 80px;
+	}
+
+	@include _991-max {
+	}
+
+	@include _767-max {
+		margin-bottom: 0;
+	}
+
+	// .imagination__container
+	&__container {
+		position: relative;
+		padding-top: calc(var(--title-top) + var(--title-height) + 100px);
+
+		@include _767-max {
+			padding-top: var(--header-height);
+		}
+	}
+
+	& .title-wrapper_imagination {
+		top: var(--title-top);
+		left: 20px;
+
+		// max-width: 1390px;
+		// @include _1559-max {
+		// 	max-width: 1000px;
+		// }
+	}
+
+	// .imagination__title
+	&__title {
+		top: var(--title-top);
+		mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/about/imagination-mask.png");
+		mask-size: 200%;
+		mask-position: 60% 50%;
+		mask-repeat: no-repeat;
+		margin: -30px;
+
+		@include _767-max {
+			position: static;
+			margin: 0;
+			padding: 0;
+		}
+
+		@include _479-max {
+			font-size: 72px;
+			letter-spacing: -0.835px;
+		}
+
+		@include _420-max {
+			display: inline-block;
+			font-size: 64px;
+			mask-position: 50% 50%;
+			mask-size: 160%;
+		}
+
+		// @media (min-width: 767.98px) {
+		h2 {
+			mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/about/imagination-mask.png");
+			mask-size: 170%;
+			mask-position: 28% -200%;
+			mask-repeat: no-repeat;
+			padding: 30px;
+			transition: mask-position var(--duration) ease;
+
+			.loaded & {
+				transition-delay: var(--deleay);
+				mask-position: 50% 45%;
+			}
+			@include _767-max {
+				mask-image: none;
+				padding: 10px 0;
+			}
+		}
+		// }
+	}
+
+	// .imagination__wrapper
+	&__wrapper {
+		// margin-top: 100px;
+		display: grid;
+		grid-template-columns: 5fr 7fr;
+
+		@media (min-width: 767.98px) {
+			transform: translateY(200px);
+			transition: all var(--duration) ease;
+			opacity: 0;
+			.loaded & {
+				opacity: 1;
+				transition-delay: var(--deleay);
+				transform: translateY(0);
+			}
+		}
+		@include _767-max {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			transform: translateY(0);
+			margin-top: 30px;
+		}
+
+		@include _479-max {
+			// margin-top: 40px;
+		}
+	}
+
+	// .imagination__sub
+	&__sub {
+		color: var(--orange-color);
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	// .imagination__content
+	&__content {
+		max-width: 850px;
+		width: 100%;
+	}
+
+	// .imagination__text
+	&__text {
+		color: #9ba4ab;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.45;
+		// letter-spacing: -1.1px;
+		@include _767-max {
+			font-size: 18px;
+		}
+	}
+
+	// .imagination__info
+	&__info {
+		margin-top: 80px;
+		width: 100%;
+		display: grid;
+		gap: 80px;
+		transform: translateY(-50px);
+		transition: 1s ease 0.2s;
+
+		@include _479-max {
+			gap: 32px;
+			margin-top: 40px;
+		}
+
+		.loaded & {
+			transform: translateY(0);
+		}
+	}
+
+	// .imagination__info-item
+	&__info-item {
+		width: 100%;
+		transform: translateY(30%);
+		opacity: 0;
+	}
+
+	// .imagination__info-num
+	&__info-num {
+		color: var(--light-color);
+		font-size: 180px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: -14.4px;
+		padding-bottom: 24px;
+		border-bottom: 1px solid #818181;
+		display: flex;
+		@include flex(flex-start, center);
+
+		@include _767-max {
+			font-size: 120px;
+			padding-bottom: 16px;
+			letter-spacing: -4px;
+		}
+
+		@include _420-max {
+			font-size: 100px;
+		}
+
+		&::after {
+			content: "+";
+			line-height: 1;
+			transform: translateY(-10px);
+			@include flex(center, center);
+			opacity: 0;
+			transition: 0.3s ease;
+		}
+		&.done {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	// .imagination__info-text
+	&__info-text {
+		color: #9ba4ab;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		// letter-spacing: -0.64px;
+		margin-top: 46px;
+
+		@include _767-max {
+			margin-top: 32px;
+			font-size: 20px;
+		}
+		@include _479-max {
+			margin-top: 18px;
+			font-size: 16px;
+		}
+	}
+
+	// .imagination__info-wrap
+
+	&__info-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .imagination__info-sub-item
+	&__info-sub-item {
+		width: 45%;
+	}
+
+	// .imagination__info-sub-num
+	&__info-sub-num {
+		color: #fff;
+		font-size: 90px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: -6.3px;
+		border-bottom: 1px solid #818181;
+		padding: 16px 0;
+
+		@include _479-max {
+			font-size: 48px;
+			padding: 8px 12px;
+			letter-spacing: 0;
+		}
+	}
+}

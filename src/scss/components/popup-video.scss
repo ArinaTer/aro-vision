@@ -1,0 +1,341 @@
+.popup-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--vh);
+  width: 100vw;
+  z-index: 100000000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #000;
+  transition: all 0.5s ease;
+  video {
+    // max-width: 100%;
+    // background: #f2f2f2;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  // display: none;
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border: none;
+    @include _767-max {
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    z-index: 3;
+    button {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 8px 20px;
+      background-color: #000;
+      border-radius: 37px;
+      p {
+        color: #fff;
+        text-align: center;
+        font-family: var(--font);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26.67px; /* 166.688% */
+      }
+    }
+  }
+  &__control {
+    position: absolute;
+    // bottom: 50%;
+    // transform: translateY(50%);
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+  }
+  &__bar {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 160px);
+    display: flex;
+    justify-content: center;
+    height: 8px;
+    @include _479-max {
+      width: 100%;
+      top: auto;
+      bottom: -7px;
+    }
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      outline: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 15px;
+        width: 15px;
+        background-color: #f37c57;
+        border-radius: 50%;
+        // border: none;
+        cursor: pointer;
+        // display: none;
+        opacity: 0;
+      }
+    }
+  }
+  &__active-line {
+    position: absolute;
+    height: 10px;
+    z-index: 100;
+    background-color: #f37c57;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 8px;
+    pointer-events: none;
+    z-index: 2;
+    // transition: all 0.3s ease;
+    &_loader {
+      position: absolute;
+      height: 10px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.2);
+      top: 0px;
+      left: 0px;
+      width: 0;
+      height: 8px;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    @include _479-max {
+      bottom: 20px;
+      left: 15px;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    &-play {
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &-pause {
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__sound {
+    position: absolute;
+    bottom: 20px;
+    right: 90px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @include _479-max {
+      display: none;
+    }
+    input {
+      width: 100px;
+      height: 6px;
+      -webkit-appearance: none;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      &::-webkit-slider-thumb {
+        cursor: pointer;
+        opacity: 0;
+      }
+      &::-webkit-slider-runnable-track {
+        // background-color: transparent;
+      }
+    }
+    &-icon {
+      position: relative;
+      width: 30px;
+      height: 30px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    &-on {
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &-off {
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &-input {
+      position: relative;
+      width: 100px;
+      height: 6px;
+      &-range {
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+    &-active-line {
+      width: 20%;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: white;
+      pointer-events: none;
+    }
+  }
+  &__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f37c57;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    pointer-events: none;
+    z-index: 3;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      width: 30px;
+      height: 30px;
+    }
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    // margin: auto;
+  }
+
+  &__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.popup-video__loader-svg.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+.popup-video__loader-svg.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}

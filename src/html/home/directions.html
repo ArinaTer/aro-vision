@@ -1,0 +1,27 @@
+<section class="direction">
+	<div class="container direction-container">
+		<div class="direction__title-wrapper">
+			<div class="direction__title">
+				<h2>We do:</h2>
+			</div>
+		</div>
+		<div class="direction__row">
+			<div>
+				<div class="direction__left-pin">
+					<div class="direction__left">
+						<div class="direction__imgs">
+							@@loop('directions-part/direc-part-img.html',
+							'html/home/directions-part/direc-part.json')
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="direction__right">
+				<div class="direction__items">
+					@@loop('directions-part/direc-part.html',
+					'html/home/directions-part/direc-part.json')
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

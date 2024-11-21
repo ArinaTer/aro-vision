@@ -1,0 +1,7 @@
+.tap-animation{
+  cursor: pointer;
+	transition: transform 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+	&.tap {
+		transform: scale(0.95);
+	}
+}

@@ -1,0 +1,148 @@
+.policy {
+    --padding-left: 70px;
+    @include _991-max {
+        --padding-left: 50px;
+    }
+
+    @include _767-max {
+        --padding-left: 20px;
+    }
+
+    width: 100%;
+    padding: var(--header-height) 0 0;
+
+    position: relative;
+    overflow-x: hidden;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 90vw;
+        height: 90vw;
+        background: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/footer/circle_01.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(45%, -50%);
+        opacity: 0.5;
+        z-index: 1;
+
+        @include _767-max {
+            width: 700px;
+            height: 700px;
+        }
+    }
+
+    &__container {
+        max-width: 1780px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        padding: 50px var(--padding-left) 0;
+
+        @include _1980-min {
+            max-width: 1920px;
+        }
+        @include _1559-max {
+        }
+
+        @include _991-max {
+            padding-top: 0;
+        }
+    }
+
+    h1 {
+        color: var(--light-color);
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -1.92px;
+
+        @include _991-max {
+            font-size: 52px;
+        }
+    }
+
+    &__text {
+        margin-top: 44px;
+    }
+
+    &__content {
+        margin-top: 54px;
+
+        @include _991-max {
+            margin-top: 32px;
+        }
+
+        br {
+            display: block;
+            content: "";
+            margin-top: 20px;
+
+            @include _991-max {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    ol {
+        display: grid;
+        gap: 48px;
+
+        div {
+            margin-top: 32px;
+
+            @include _991-max {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    ol > li {
+        color: var(--light-color);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        list-style: none;
+        counter-increment: step-counter;
+
+        @include _991-max {
+            font-size: 28px;
+        }
+
+        &::before {
+            content: counter(step-counter) ". ";
+            color: var(--orange-color);
+        }
+    }
+
+    ul {
+        margin-top: 24px;
+        padding-left: 24px;
+
+        @include _991-max {
+            padding-left: 18px;
+        }
+
+        li {
+            list-style-type: disc;
+            &::marker {
+                color: var(--light-color);
+            }
+        }
+    }
+
+    p,
+    ul li {
+        color: var(--light-color);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 130%;
+
+        @include _991-max {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "metrik-name": "3d artists",
+        "title": "3d Artists",
+        "text": "Our 3D artists transcend mere professionalism. They are visionaries and masters of their craft, breathing life into concepts and creating captivating visual experiences. Their expertise spans various aspects of 3D design, from modeling and texturing to animation, with each team member bringing a unique perspective and talent. Never content with the status quo, our artists continually push the boundaries of what is possible, tirelessly exploring new techniques and technologies to elevate our work."
+    },
+    {
+        "metrik-name": "frontend dev",
+        "title": "Frontend Developers",
+        "text": "Introducing our Frontend Developers at AX DIGITAL: the powerhouse driving our company's progress with groundbreaking solutions. With a deep command of HTML, CSS, JavaScript, and beyond, they navigate the intricate world of frontend development with finesse. From building responsive layouts to fine-tuning performance, they leave no detail overlooked, ensuring each pixel is impeccably polished."
+    },
+    {
+        "metrik-name": "content managers",
+        "title": "Content Managers",
+        "text": "From ideation to execution, our content managers possess a versatile skill set that includes content creation, curation, and distribution. They understand the intricacies of audience engagement across various platforms and tailor each piece of content to resonate deeply with our target audience. With a natural sense of storytelling and attention to details, they ensure that each piece not only grabs attention but also builds meaningful connections."
+    },
+    {
+        "metrik-name": "ux ui designers",
+        "title": "UX/UI Designers",
+        "text": "Our team of UX/UI designers is dedicated to creating seamless and intuitive digital experiences. Each member brings a unique blend of creativity and technical expertise, combining user-centered design principles with the latest technologies to ensure every interaction with our products significantly impacts our audience. Their commitment to innovation and attention to detail push the boundaries of digital design, creating experiences that exceed expectations and forge lasting connections with users."
+    },
+    {
+        "metrik-name": "motion designers",
+        "title": "Motion Designers",
+        "text": "From concept development to final production, AX DIGITAL's motion designers leverage the latest tools and techniques to create immersive experiences that form a strong connection with our audience. Through the seamless integration of animation, typography, and sound design, each video promotion leaves a lasting impression. These passionate and committed professionals continually push the boundaries of creativity, delivering video promotions that exceed expectations through innovation and excellence."
+    },
+    {
+        "metrik-name": "qa specialists",
+        "title": "QA Specialists",
+        "text": "QA specialists at AX DIGITAL are committed to upholding the highest quality standards for all our products. They meticulously examine every stage of the development process to ensure our products meet or surpass the most stringent criteria of excellence. Their insightful feedback enables the development team to enhance and refine our products continually."
+    }
+]

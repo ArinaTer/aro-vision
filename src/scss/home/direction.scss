@@ -1,0 +1,475 @@
+:root {
+  --direc-item-height: 260px;
+
+  @include _2880-min {
+    --direc-item-height: 300px;
+  }
+
+  @include _1559-max {
+    --direc-item-height: 250px;
+  }
+  --direc-item-height: 260px;
+
+  @include _2880-min {
+    --direc-item-height: 300px;
+  }
+
+  @include _1559-max {
+    --direc-item-height: 250px;
+  }
+
+  @include _767-max {
+    --direc-item-height: 160px;
+  }
+}
+
+.direction {
+  --padding-top: 120px;
+  position: relative;
+  max-width: 2560px;
+  width: 100%;
+  margin: 0 auto;
+
+  position: relative;
+  max-width: 2560px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: calc(var(--vh) * -0.2);
+
+  &::before {
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 96.17%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    transform: translateY(-100%);
+
+    @include _767-max {
+      display: none;
+    }
+  }
+
+  @include _991-max {
+    margin-top: 0;
+  }
+  background-color: var(--dark-color);
+  z-index: 20;
+
+  // direction__inner
+
+  &__inner {
+    top: 0;
+  }
+
+  // direction-container
+  &-container {
+    padding: 40vh 20px 0;
+    position: relative;
+
+    @include _2880-min {
+      padding-top: 30vh;
+    }
+
+    @include _991-max {
+      padding-top: 20vh;
+    }
+
+    @include _767-max {
+      padding-top: 60px;
+    }
+  }
+
+  // .direction__title-wrapper
+  &__title-wrapper {
+    font-weight: 700;
+    font-size: 248px;
+    line-height: 86%;
+    letter-spacing: -0.03em;
+    color: var(--light-color);
+    padding: var(--header-height) 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(var(--vh));
+    display: inline-block;
+    @include _767-max {
+      height: auto;
+    }
+    @include _1559-max {
+      font-size: 180px;
+    }
+
+    @include _1399-max {
+      font-size: 152px;
+    }
+
+    @include _767-max {
+      position: relative;
+      padding: 0;
+      font-size: 84px;
+      display: inline-block;
+    }
+
+    @include _479-max {
+      font-size: 64px;
+    }
+  }
+
+  // .direction__title
+
+  &__title {
+    mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/directions/Mask-group.png");
+    mask-repeat: no-repeat;
+    mask-position: 30% 45%;
+    mask-repeat: no-repeat;
+    position: sticky;
+    mask-size: 200%;
+    top: var(--padding-top);
+    @include _767-max {
+      position: static;
+      mask-position: 60% 45%;
+    }
+    h2 {
+      mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/directions/Mask-group.png");
+      mask-repeat: no-repeat;
+      mask-position: 30% 45%;
+      mask-repeat: no-repeat;
+      mask-size: 200%;
+
+      @include _767-max {
+        mask-position: 60% 45%;
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+
+    @include _2880-min {
+    }
+
+    @include _1399-max {
+      grid-template-columns: 5fr 7fr;
+    }
+
+    // @include _991-max {
+    //   gap: 30px;
+    // }
+
+    @include _991-max {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 50px;
+    }
+
+    @include _479-max {
+      margin-top: 30px;
+    }
+  }
+
+  // .direction__left-pin
+  &__left-pin {
+    position: absolute;
+    top: 40vh;
+    bottom: 0;
+    height: auto;
+
+    @include _2880-min {
+      top: 30vh;
+    }
+
+    @include _991-max {
+      display: none;
+    }
+  }
+
+  // .direction__left
+  &__left {
+    height: var(--direc-item-height);
+    max-width: 380px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: sticky;
+    top: 40%;
+
+    @include _1980-min {
+      max-width: 420px;
+    }
+
+    @include _2880-min {
+      max-width: 460px;
+      top: 30%;
+    }
+
+    @include _991-max {
+      max-width: 300px;
+    }
+  }
+
+  // .direction__right
+  &__right {
+  }
+
+  // .direction__imgs
+  &__imgs {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    // gap: 50px;
+    background-color: #1b1b1b;
+    will-change: transform;
+  }
+
+  // .direction__img
+  &__img {
+    height: var(--direc-item-height);
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      transform: scale(0.7);
+      transform-origin: center;
+      will-change: transform;
+      // transition: 1s ease;
+    }
+
+    // &.active img {
+    //   transform: scale(1);
+    // }
+  }
+
+  // .direction__items
+  &__items {
+    display: grid;
+    will-change: transform;
+  }
+
+  // .direction__item
+  &__item {
+    border-bottom: 0.5px solid #818181;
+    height: var(--direc-item-height);
+    @include flex(space-between, center);
+    gap: 40px;
+    opacity: 0.5;
+    transition: 0.3s ease;
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include _991-max {
+      gap: 24px;
+    }
+
+    @include _767-max {
+      align-items: flex-start;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // .direction__item-content
+  &__item-content {
+    max-width: 900px;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+
+  // .direction__item-head
+  &__item-head {
+    @include flex(flex-start, center);
+    gap: 40px;
+
+    @include _1399-max {
+      gap: 24px;
+    }
+    @include _991-max {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  // .direction__item-img
+  &__item-img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    @include _1399-max {
+      width: 44px;
+      height: 44px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &--def {
+      position: relative;
+      z-index: 1;
+      transition: 0.3s ease;
+
+      .active & {
+        opacity: 0;
+      }
+    }
+    &--active {
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.3s ease;
+
+      .active & {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .direction__item-title
+  &__item-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 222%;
+    letter-spacing: -0.04em;
+    color: var(--light-color);
+
+    @include _1559-max {
+      font-size: 40px;
+    }
+
+    @include _1399-max {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+
+    @include _767-max {
+      font-size: 20px;
+    }
+  }
+
+  // .direction__item-icon-mob
+
+  &__item-icon-mob {
+    display: none;
+
+    @include _767-max {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px 0 20px 20px;
+    }
+  }
+
+  // .direction__item-text
+  &__item-text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 145%;
+    letter-spacing: -0.05em;
+    color: #a8a8a8;
+    @include _2880-min {
+      font-size: 24px;
+    }
+
+    @include _1559-max {
+      font-size: 20px;
+    }
+
+    @include _1399-max {
+      font-size: 18px;
+    }
+
+    @include _1199-max {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+    @include _991-max {
+      font-size: 16px;
+      padding-left: 68px;
+    }
+
+    @include _767-max {
+      letter-spacing: 0;
+    }
+  }
+
+  // .direction__item-link
+  &__item-link {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+
+    @include _1399-max {
+      width: auto;
+      border: 0;
+      span {
+        // display: none;
+      }
+    }
+
+    @include _767-max {
+      margin-top: 10px;
+    }
+
+    .active & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .direction__item:hover & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .arrow-btn__wrapper {
+    @include _767-max {
+      display: none;
+    }
+  }
+  --direc-item-height: 260px;
+
+  @include _2880-min {
+    --direc-item-height: 300px;
+  }
+
+  @include _1559-max {
+    --direc-item-height: 250px;
+  }
+  --direc-item-height: 260px;
+
+  @include _2880-min {
+    --direc-item-height: 300px;
+  }
+
+  @include _1559-max {
+    --direc-item-height: 250px;
+  }
+
+  @include _767-max {
+    --direc-item-height: 160px;
+  }
+}

@@ -1,0 +1,529 @@
+.career {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100vw;
+  --fs: 213.79px;
+  --deleay: 1.2s;
+  --duration: 0.8s;
+  @media (min-height: 1800px) {
+    --fs: 310px;
+  }
+  @media (max-width: 1629px) {
+    --fs: 150px;
+  }
+  @media (max-width: 1350px) {
+    --fs: 130px;
+  }
+  @media (max-width: 1226px) {
+    --fs: 120px;
+  }
+  @media (max-width: 940px) {
+    --fs: 90px;
+  }
+  @include _479-max {
+    --fs: 100px;
+
+    height: 100svh;
+    &.career-active-item {
+      height: auto;
+    }
+  }
+  // .career__wrapper
+
+  &__wrapper {
+    position: relative;
+    padding: var(--header-height) 0px 50px 0px;
+
+    // height: var(--vh);
+    @media (max-width: 1226px) {
+      padding: var(--header-height) 0px 20px 0px;
+    }
+    @include _767-max {
+      padding: 60px 20px 20px 20px;
+    }
+    @include _479-max {
+      height: 100%;
+      margin-bottom: 50px;
+      // padding: 60px 0px 20px 0px;
+    }
+  }
+
+  &__stiky {
+    max-width: 1770px;
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: var(--header-height);
+    @media (min-height: 1800px) {
+      transform: translateY(150px);
+      max-width: 2300px;
+    }
+    @media (max-width: 1629px) {
+      max-width: 1300px;
+    }
+    @media (max-width: 1226px) {
+      max-width: 1000px;
+    }
+    @media (max-width: 940px) {
+      max-width: 750px;
+    }
+    padding: 0px 50px 0px 50px;
+    // height: var(--vh);
+    @media (max-width: 1226px) {
+      padding: 0px 20px 0px 20px;
+    }
+    @include _767-max {
+      padding: 0;
+      position: static;
+    }
+  }
+
+  // .career__title
+
+  &__title {
+    margin-bottom: 40px;
+    display: inline-block;
+    mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/career/career-title.png");
+    mask-repeat: no-repeat;
+    mask-size: 160%;
+    mask-position: 50% 50%;
+    overflow: hidden;
+    padding: 0px 10px;
+
+    @media (min-height: 1800px) {
+      transform: translateY(-150px);
+      // max-width: 2300px;
+    }
+    @include _767-max {
+      position: sticky;
+      top: 0;
+    }
+    h2 {
+      color: #fff;
+      font-family: var(--font);
+      font-size: var(--fs);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1; /* 85.678% */
+      letter-spacing: -8px;
+      display: inline-block;
+      mask-image: url("https://d3b6muno9lbfvx.cloudfront.net/ax-digital/career/career-title.png");
+      mask-repeat: no-repeat;
+      mask-size: 160%;
+      mask-position: 50% -150%;
+      overflow: hidden;
+      padding: 0px 10px;
+      @include _767-max {
+        mask-position: 50% 50%;
+      }
+      @media (min-width: 768px) {
+        opacity: 0;
+        transition: all var(--duration) ease;
+        .loaded & {
+          opacity: 1;
+          transition-delay: var(--deleay);
+          mask-position: 50% 50%;
+        }
+      }
+    }
+  }
+
+  // .career__content
+
+  &__content {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    @media (min-height: 1800px) {
+      // transform: translateY(150px);
+      max-width: 2300px;
+    }
+    @include _767-max {
+      height: calc(100svh - 205px);
+      .career-active-item & {
+        height: auto;
+      }
+    }
+  }
+  // .career__items
+  &__items {
+    background-color: #000;
+
+    @media (min-width: 768px) {
+      height: 100%;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all var(--duration) ease;
+      .loaded & {
+        opacity: 1;
+        transition-delay: var(--deleay);
+        transform: translateY(0);
+      }
+    }
+  }
+
+  // .career__item
+
+  &__item {
+    position: relative;
+    color: #fff;
+
+    @include _767-max {
+      overflow: visible;
+      // height: 16%;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        .career__item-bg {
+          // clip-path: inset(0 0 0 0);
+          transform: scaleY(1);
+        }
+        .career__item-button__wrapper {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .career__item-title {
+          color: #000;
+        }
+        .career__item-icon svg {
+          path {
+            fill: #000;
+          }
+        }
+      }
+    }
+    &.career-card-active {
+      .career__item-bg {
+        @include _767-max {
+          transition: all 0.7s ease;
+        }
+        transform: scaleY(1);
+        // clip-path: inset(0 0 0 0);
+      }
+      .career__item-button__wrapper {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        @include _767-max {
+          transform: translateY(0) rotate(-180deg);
+        }
+      }
+      .career__item-button__wrapper span img {
+        transform: rotate(-180deg);
+      }
+      .career__item-title {
+        color: #000;
+      }
+      .career__item-icon svg {
+        path {
+          fill: #000;
+        }
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+
+      @include _767-max {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows 0.7s ease;
+        z-index: 1;
+        .career-card-active & {
+          grid-template-rows: 1fr;
+        }
+      }
+    }
+    &-content {
+      // display: none;
+      height: auto;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      pointer-events: none;
+      clip-path: inset(0 0 100% 0);
+      transition: all 0.5s ease;
+
+      .career-card-active & {
+        // transition-delay: 1s;
+        pointer-events: auto;
+        clip-path: inset(0 0 0% 0);
+      }
+      @include _767-max {
+        position: static;
+        pointer-events: auto;
+        clip-path: none;
+      }
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      pointer-events: none;
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: bottom center;
+      transition: transform 0.7s ease;
+      @include _767-max {
+        transition: all 0s ease;
+      }
+    }
+    &-btn-mob {
+      display: none;
+      position: relative;
+      z-index: 10;
+      width: 21px;
+      height: 21px;
+      transition: transform 0.3s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        background-color: #1a1a1a;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .career-card-active & {
+        transform: rotate(-180deg);
+      }
+      img {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+      }
+      @include _767-max {
+        display: block;
+      }
+    }
+  }
+
+  // .career__item-title
+
+  &__item-title {
+    color: #fff;
+    font-family: var(--font);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    transition: color 0.7s ease;
+    border-bottom: 1px solid #1a1a1a;
+    border-top: 1px solid #1a1a1a;
+    padding: 47px 50px 47px 50px;
+    overflow: hidden;
+    @media (max-width: 1226px) {
+      padding: 20px;
+    }
+    @include _767-max {
+      font-size: 20px;
+      padding: 20px 20px 20px 60px;
+      // position: sticky;
+      // top: 50px;
+      height: calc((100svh - 205px) / 6.1);
+    }
+  }
+  // .career__item-number
+  &__item-number {
+  }
+  // .career__item-text
+  &__item-text {
+    display: flex;
+    align-items: center;
+    gap: 81px;
+    @include _767-max {
+      // padding-left: 0px;
+    }
+    span {
+      @media (max-width: 1000px) {
+        opacity: 0;
+        visibility: hidden;
+      }
+      @include _767-max {
+        display: none;
+      }
+    }
+    // width: 500px;
+  }
+  &__item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 1440px) {
+      transform: translate(100px, -50%);
+    }
+    @media (max-width: 1200px) {
+      transform: translate(200px, -50%);
+    }
+    @media (max-width: 1000px) {
+      left: 0;
+      transform: translate(20px, -50%);
+    }
+    // @include _767-max {
+    //   left: 0;
+    //   transform: translate(20px, -50%);
+    // }
+    svg {
+      path {
+        transition: fill 0.7s ease;
+      }
+      @include _767-max {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+  &__item-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px;
+    border: 2px solid #000;
+    padding: 8px 20px;
+    height: max-content;
+
+    @include _767-max {
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #1f1f1f;
+      transform: translateY(0);
+      border: 0;
+      opacity: 1;
+      visibility: visible;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // opaci;
+    }
+    h4 {
+      color: #000;
+      text-align: center;
+      font-family: var(--font);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1; /* 166.688% */
+      height: auto;
+      @include _767-max {
+        display: none;
+      }
+    }
+    &-desc {
+      @include _767-max {
+        display: none;
+      }
+    }
+    &-mob {
+      display: none;
+      @include _767-max {
+        display: block;
+      }
+    }
+  }
+}
+
+// arrow btn career
+
+.career {
+  .tap-animetion {
+  }
+  // .career__item-button
+
+  &__item-button {
+    border-radius: 37px;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+    span {
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform 0.3s ease;
+      img {
+        transition: transform 0.3s ease;
+      }
+      &:first-child {
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(2) {
+        transform: translate(-50%, 50px);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        span:first-child {
+          transform: translate(-50%, -50px);
+        }
+        span:nth-child(2) {
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    &__container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      // background-color: red;
+      z-index: 2;
+      @include _767-max {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+      }
+    }
+    &__wrapper {
+      position: relative;
+      width: 112px;
+      height: 43px;
+      opacity: 0;
+      // visibility: hidden;
+      transform: translateY(100px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+      @include _767-max {
+        // width: 100%;
+        display: none;
+      }
+      // background-color: teal;
+    }
+  }
+}

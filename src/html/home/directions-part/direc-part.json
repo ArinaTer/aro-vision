@@ -1,0 +1,72 @@
+[
+    {
+        "metrik-name": "exclusive websites",
+        "data-direction": "exclusive-websites",
+        "media": "exclusives.jpg",
+        "link": "/directions",
+        "title": "Exclusive websites",
+        "icon": "exclusive.svg",
+        "active-icon": "exclusive-active.svg",
+        "text": "The AX DIGITAL team aims to ensure that each website and landing page we produce not only reflects innovation but also serves as an effective tool for lead generation."
+    },
+    {
+        "metrik-name": "landing page templates",
+        "data-direction": "landing-page-templates",
+        "media": "templates.jpg",
+        "link": "/directions",
+        "title": "Landing page templates",
+        "icon": "web-temp.svg",
+        "active-icon": "web-temp-active.svg",
+        "text": "We understand that time is a valuable resource, so our templates are optimized for instant connections with potential clients."
+    },
+    {
+        "metrik-name": "3d visualization",
+        "data-direction": "3d-visualization",
+        "media": "3D-visualition.jpg",
+        "link": "/directions",
+        "title": "3D Visualization",
+        "icon": "3d-vis.svg",
+        "active-icon": "3d-vis-active.svg",
+        "text": "The passion for 3D visualization stems from a profound understanding of its potential and impact across various industries. With extensive experience in this field, we can transform abstract ideas into impressive visual imagery."
+    },
+    {
+        "metrik-name": "video production",
+        "data-direction": "video-production",
+        "media": "video-editing.jpg",
+        "link": "/directions",
+        "title": "Video production",
+        "icon": "video.svg",
+        "active-icon": "video-active.svg",
+        "text": "Our team of video production specialists possesses extensive experience and a creative approach to each project. We are skilled at capturing emotions and conveying them through the camera lens, creating unique and compelling visuals."
+    },
+    {
+        "metrik-name": "branding",
+        "data-direction": "branding",
+        "media": "branding.jpg",
+        "link": "/directions",
+        "title": "Branding",
+        "icon": "branding.svg",
+        "active-icon": "branding-active.svg",
+        "text": "At AX DIGITAL, we understand that branding is the formation of a unique identity for a business, reflecting its values and mission. It is important to note that our company also specializes in developing comprehensive branding strategies to stand out in the market."
+    },
+    {
+        "metrik-name": "ar vr solutions",
+        "data-direction": "ar-vr-solutions",
+        "media": "arvr.jpg",
+        "link": "/directions",
+        "title": "AR & VR Solutions",
+        "icon": "ar-vr.svg",
+        "active-icon": "ar-vr-active.svg",
+        "text": "The fields of Augmented Reality (AR) and Virtual Reality (VR) are opening new horizons in visualization and interactive engagement with projects."
+    },
+    {
+        "metrik-name": "marketing",
+        "data-direction": "marketing",
+        "media": "markeing-new.jpg",
+        "link": "/directions",
+        "title": "Marketing",
+        "icon": "marketing.svg",
+        "active-icon": "marketing-active.svg",
+        "text": "At AX DIGITAL, we provide top-notch marketing services with a focus on speed and guaranteed high results. Our comprehensive solutions ensure your product gets the attention it deserves. Trust us to elevate your brand and drive success."
+    }
+]
