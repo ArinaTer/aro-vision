@@ -1,0 +1,229 @@
+.video-control {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 170%);
+  transition: opacity 0.3s;
+  @include _767-max {
+    height: 60px;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  // .video-control__wrapper
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  // .video-control__bar
+
+  &__bar {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 6px;
+    @include _767-max {
+      top: initial;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+    }
+    // .video-control__bar_passive
+    &_passive {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      outline: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 1;
+      &::-webkit-slider-thumb {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    // .video-control__bar_active
+
+    &_active {
+      position: absolute;
+      height: 10px;
+      z-index: 100;
+      background-color: #f37c57;
+      top: 0px;
+      left: 0px;
+      width: 0%;
+      // transform: scaleX(0);
+      height: 6px;
+      pointer-events: none;
+      z-index: 2;
+      // transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    // .video-control__bar_load
+
+    &_load {
+      position: absolute;
+      height: 10px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.2);
+      top: 0px;
+      left: 0px;
+      width: 0%;
+      height: 6px;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  // .video-control__play
+
+  &__btns {
+    position: absolute;
+    bottom: 15px;
+    left: 75px;
+    width: 25px;
+    height: 25px;
+    @include _767-max {
+      height: 15px;
+      width: 15px;
+      left: 20px;
+      bottom: 19px;
+    }
+    button {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .video-control__time
+
+  &__time {
+    position: absolute;
+    bottom: 15px;
+    right: 75px;
+    @include _767-max {
+      right: 20px;
+      bottom: 19px;
+    }
+    p {
+      color: #a8a8a8;
+      text-align: right;
+      font-size: 22.737px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+      @include _767-max {
+        font-size: 20px;
+        line-height: 100%;
+      }
+      @include _576-max {
+        font-size: 14px;
+      }
+    }
+  }
+}
+video {
+  cursor: pointer;
+
+  max-width: 100%;
+  // background: #f2f2f2;
+}
+
+.popup-video__loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  &.show {
+    display: flex;
+  }
+}
+
+.popup-video__loader-svg.loader {
+  z-index: 2s;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+.popup-video__loader-svg.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}

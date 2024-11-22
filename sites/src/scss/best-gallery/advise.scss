@@ -1,0 +1,123 @@
+.advise {
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #414141;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  // advise__container
+  &__container {
+    margin-top: 100px;
+    @include _767-max {
+      margin-top: 55px;
+    }
+  }
+
+  // advise__title
+  &__title {
+    margin-bottom: 48px;
+    @include _767-max {
+      margin-bottom: 23px;
+    }
+    h3 {
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 40px;
+      letter-spacing: -1.9px;
+      color: var(--light-color);
+      @include _767-max {
+        font-size: 32px;
+      }
+      @include _576-max {
+        font-size: 20px;
+      }
+    }
+  }
+  // advise__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+    position: relative;
+    @include _991-max {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 2fr;
+    }
+    @include _767-max {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // advise__card
+  &__card {
+    max-width: 352px;
+    width: 100%;
+    overflow: hidden;
+    @include _767-max {
+      max-width: 100%;
+    }
+  }
+
+  // advise__card-img
+  &__card-img {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 27px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // advise__card-title
+  &__card-title {
+    margin-bottom: 15px;
+    position: relative;
+    height: 20px;
+    h6 {
+      position: absolute;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: var(--light-color);
+    }
+    &::after {
+      content: "";
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        #000000 100%
+      );
+    }
+  }
+
+  // advise__card-text
+  &__card-text {
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 27px;
+      background: linear-gradient(353.27deg, #f37c57 17.12%, #fcd2a1 95.89%),
+        #ab8cff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}

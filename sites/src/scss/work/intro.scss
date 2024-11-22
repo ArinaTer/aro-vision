@@ -1,0 +1,349 @@
+.intro {
+  width: 100%;
+  height: 100lvh;
+  position: relative;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    @include _767-max {
+      padding-top: 73px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .scroll-down {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    // @include _767-max {
+    //   bottom: 8px;
+    // }
+  }
+
+  &__loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    background-color: rgba(30, 30, 30, 0.5);
+    z-index: 111;
+    @include _767-max {
+      padding-top: 73px;
+    }
+
+    .add-loader & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__loader-circle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &::after {
+      content: "";
+      width: 48px;
+      height: 48px;
+      border: 5px solid #fff;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      animation: rotation 1s linear infinite;
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.intro-second {
+  position: relative;
+  overflow: hidden;
+  .intro__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    opacity: 1;
+    // transition: opacity 1s;
+  }
+
+  .intro__bg-title {
+    z-index: 3;
+    max-width: 40%;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+    // opacity: 0;
+    @include _767-max {
+      line-height: 26px;
+      letter-spacing: -1px;
+      font-size: 32px;
+      max-width: 50%;
+    }
+    @include _576-max {
+      font-size: 20px;
+      max-width: 70%;
+    }
+  }
+
+  .intro__bg-wrapper {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    // opacity: 0;
+    @include _767-max {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .intro__bg-btn__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    @include _767-max {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+  .intro__bg-btn__wrapper {
+    position: relative;
+    width: 165px;
+    height: 43px;
+  }
+
+  .intro__bg-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px;
+    min-width: 165px;
+    width: 100%;
+    height: 43px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26.67px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+
+    @include _767-max {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+
+    span {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26.67px;
+      @include _576-max {
+        font-size: 14px;
+      }
+    }
+
+    @include _479-max {
+      padding: 20px 24px;
+    }
+  }
+
+  .intro__bg-btn-prev {
+    .intro__bg-btn {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  .intro__bg-btn-next {
+    .intro__bg-btn {
+      background-color: #fff;
+      border: 1px solid #fff;
+      color: #000;
+      svg {
+        order: 2;
+
+        path {
+          stroke: #000;
+        }
+      }
+    }
+  }
+
+  .intro__wrapper {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    height: 100vh;
+  }
+
+  .no-next-work & {
+    display: none;
+  }
+
+  .intro__img {
+    transform: scale(1.2);
+  }
+
+  .intro__container {
+    clip-path: inset(20% 25% round 18px);
+    height: 100vh;
+    @include _767-max {
+      clip-path: inset(25% 15% round 0px);
+    }
+  }
+}
+
+.intro-second.introNext {
+  .intro__bg {
+    opacity: 0 !important;
+    // transition: opacity 1s;
+    pointer-events: none;
+    transition: all 1s ease-out;
+  }
+  .intro__container {
+    // transition: clip-path 1s;
+    clip-path: inset(0% 0% round 0px) !important;
+    transition: all 1s ease-out;
+  }
+
+  .intro__img {
+    transition: transform 1s;
+    transform: scale(1) !important;
+    transition: all 1s ease-out;
+
+    // scale: 1 !important;
+  }
+}
+
+.hide-prev-btn {
+  .intro__bg-btn-prev {
+    display: none;
+  }
+}
+
+.intro-first {
+  @include _767-max {
+    height: 43vh;
+    will-change: height;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: auto;
+  }
+  .scroll-down {
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+
+    &::after {
+      content: "";
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 82.43%);
+      position: absolute;
+      bottom: -37px;
+      width: 100%;
+      height: 275px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .btn-scrollDown & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 1s;
+    }
+  }
+
+  .scroll-down__wrapper {
+    flex-direction: column;
+    gap: 5px;
+    bottom: 35px;
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+    transition-delay: 0.5s;
+    @include _767-max {
+      bottom: 8px;
+    }
+
+    .btn-scrollDown & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 1s;
+    }
+  }
+  .scroll-down__text {
+    @include _767-max {
+      display: none;
+    }
+  }
+}

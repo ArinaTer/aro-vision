@@ -1,0 +1,129 @@
+.about-dev {
+  margin-top: 85px;
+
+  // about-dev__row
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    @include _1199-max {
+      gap: 50px;
+    }
+    @include _991-max {
+      flex-wrap: wrap;
+    }
+    @include _767-max {
+      gap: 24px 35px;
+    }
+    @include _576-max {
+      gap: 20px 25px;
+
+    }
+    // @include _576-max {
+    //   display: grid;
+    //   flex-wrap: initial;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   grid-template-rows: repeat(2, 1fr);
+    //   grid-column-gap: 0px;
+    //   grid-row-gap: 0px;
+    // }
+  }
+
+  // about-dev__col
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    @include _767-max {
+      gap: 2px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -48px;
+      width: 2px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      @include _1199-max {
+        right: -26px;
+      }
+      @include _991-max {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+
+        @include _991-max {
+          right: -26px;
+        }
+        @include _767-max {
+          right: -20px;
+        }
+        @include _576-max  {
+          right: -13px;
+        }
+        // @include _576-max {
+        //   right: 0;
+        // }
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+  // about-dev__title
+  &__title {
+    h3 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 100%;
+      letter-spacing: -1.92px;
+      color: var(--light-color);
+      @include _1199-max {
+        font-size: 32px;
+      }
+      @include _767-max {
+        font-size: 28px;
+      }
+      @include _576-max {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+      @include _576-max {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  //  about-dev__text
+  &__text {
+    span {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+      color: #a8a8a8;
+      @include _767-max {
+        font-size: 18px;
+      }
+      @include _576-max {
+        font-size: 12px;
+      }
+    }
+  }
+}

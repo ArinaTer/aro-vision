@@ -1,0 +1,66 @@
+.software {
+  margin-top: 200px;
+  @include _767-max {
+    margin-top: 65px;
+  }
+  // software__title
+  &__title {
+    margin-bottom: 32px;
+    @include _767-max {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 100%;
+      // letter-spacing: -1.92px;
+      color: var(--light-color);
+      @include _767-max {
+        font-size: 32px;
+      }
+      @include _576-max {
+        font-size: 20px;
+        letter-spacing: initial;
+        line-height: 20px;
+      }
+    }
+  }
+
+  // software__list
+  &__list {
+    // max-width: 560px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 14px;
+  }
+
+  // software__card
+  &__card {
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  // software__name
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #abb5bc;
+  }
+
+  // software__img
+  &__img {
+    max-width: 19px;
+    // height: 19px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

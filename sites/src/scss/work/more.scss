@@ -1,0 +1,98 @@
+.more {
+  margin-top: 95px;
+  @include _767-max {
+    margin-top: 50px;
+  }
+
+  // more__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    border-radius: 20px;
+    padding: 21px 27px;
+    width: 100%;
+    @include _767-max {
+      padding: 10px 14px;
+      border-radius: 11px;
+    }
+    transition: all 0.8s;
+    &:hover {
+      background-color: #343434;
+    }
+  }
+
+  // more__even
+  &__even {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    @include _767-max {
+      gap: 12px;
+    }
+  }
+
+  // more__img
+  &__img {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 111px;
+    height: 66px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // more__subtitle
+  &__subtitle {
+    margin-bottom: 9px;
+    @include _767-max {
+      margin-bottom: 5px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 27px;
+      color: #b0b0b0;
+      @include _576-max {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // more__title
+  &__title {
+    h4 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: var(--light-color);
+      @include _576-max {
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  // more__odd
+  &__odd {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  // more__odd-text
+  &__odd-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    color: #b0b0b0;
+    @include _767-max {
+      display: none;
+    }
+  }
+}

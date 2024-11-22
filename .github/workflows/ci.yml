@@ -33,4 +33,4 @@ jobs:
         run: npm ci && npm run build
 
       - name: Build image
-        run: aws s3 sync ./build s3://aro.vision.website/
+        run: aws s3 sync ./build s3://aro.vision.website/ && aws cloudfront create-invalidation --distribution-id E1ZTMXU4FC8K7A --paths '/*'

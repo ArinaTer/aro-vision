@@ -1,0 +1,61 @@
+@import "node_modules/@fancyapps/ui/dist/fancybox/fancybox";
+
+@import "node_modules/swiper/swiper";
+@import "node_modules/swiper/modules/pagination/pagination";
+@import "node_modules/swiper/modules/navigation/navigation";
+@import "node_modules/swiper/modules/autoplay/autoplay";
+@import "node_modules/swiper/modules/effect-fade/effect-fade";
+
+@import "node_modules/@photo-sphere-viewer/core/index.scss";
+
+
+//Font
+@import "../files/fonts/font.css";
+
+// Base
+@import "base/mixin";
+@import "base/var";
+@import "base/reset";
+@import "base/settings";
+
+// Work
+@import "work/intro";
+@import "work/headline";
+@import "work/software-used";
+@import "work/about-development";
+@import "work/more";
+@import "work/stages";
+@import "work/advise";
+@import "work/scroll-down";
+
+// Components
+// @import "best-gallery/intro-gallery";
+
+@import "best-gallery/headline";
+// @import "best-gallery/advise";
+// @import "best-gallery/scroll-down";
+@import "best-gallery/best-collections";
+@import "components/videoControl";
+@import "components/tapAnimation";
+
+body {
+  // &.work-page {
+  //   height: 100%;
+  // }
+  &.no-scroll-intro2 {
+    overflow: hidden;
+  }
+}
+.gallery-open {
+  .works-iframes__head {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.fullscreen-viewer-active {
+  .works-iframes__head {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
