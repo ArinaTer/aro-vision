@@ -31,9 +31,9 @@ export async function preloader(cb) {
     animatePreloader(1);
     console.log(error);
   }
-  // window.dispatchEvent(new CustomEvent("media-loaded"))
-  // commonInstructions(cb);
-  checkHomePage();
+  window.dispatchEvent(new CustomEvent("media-loaded"))
+  commonInstructions(cb);
+  // checkHomePage();
   // parol();
 }
 
@@ -154,7 +154,7 @@ function commonInstructions(cb) {
   validVideo();
 }
 
-let isCorrectParol = false;
+let isCorrectParol = true;
 function parol() {
   document.querySelector(".parol__submit").addEventListener("click", () => {
     parolCode();
