@@ -78,6 +78,7 @@
 
   &__container {
     display: flex;
+    align-items: center;
     gap: 78px;
     border-radius: 50px;
     // width: max-content;
@@ -140,6 +141,10 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    height: 42px;
+    img {
+      height: 100%;
+    }
 
     body:has(:not(.home)) & {
       transform: translateX(15px);
@@ -156,6 +161,7 @@
     }
 
     @include _767-max {
+      height: 30px;
       position: relative;
       padding-left: 0px;
       z-index: 101;

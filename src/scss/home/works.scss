@@ -731,12 +731,14 @@
 
 		&-icon {
 			display: none;
+			width: 80px;
+			img {
+				width: 100%;
+			}
+			
 			@include _767-max {
 				display: block;
 				width: 62px;
-				img {
-					width: 100%;
-				}
 			}
 		}
 	}

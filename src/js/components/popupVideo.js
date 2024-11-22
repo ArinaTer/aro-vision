@@ -7,7 +7,7 @@ import {
 } from "../components/utils.js";
 export function popupVideo() {
   // const matches = queryMatches(479.98, "max");
-  const matches = queryMatches(768.98, "max");
+  const matches = queryMatches(767.98, "max");
   // Получение DOM элементов
 
   const getEl = (selector) => document.querySelector(selector);

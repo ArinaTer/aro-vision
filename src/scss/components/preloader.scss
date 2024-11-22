@@ -43,6 +43,7 @@
     z-index: 10002;
     will-change: transform;
     pointer-events: none;
+
     // overflow: hidden;
     .loaded & {
       // overflow: auto;
@@ -71,7 +72,7 @@
             transform: translate(50%, 0) scale(0.431);
           }
           @media (max-width: 1200px) {
-            top: -33px;
+            top: -26px;
             transform: translate(50%, 0) scale(0.15);
           }
         }
@@ -82,8 +83,8 @@
             transform: translate(-358px, -2px) scale(0.431);
           }
           @media (max-width: 1200px) {
-            top: -33px;
-            transform: translate(-37px, 0px) scale(0.15);
+            top: -26px;
+            transform: translate(-44px, 0px) scale(0.15);
           }
         }
       }
