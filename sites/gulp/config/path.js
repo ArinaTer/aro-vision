@@ -4,7 +4,7 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 const buildFolder = "./dist";
 // const buildFolder2 = "./build";
 // const buildFolder2 = "../ax-digital/src/files/works";
-const buildFolder2 = "../ax-digital-dev/src/files/works";
+const buildFolder2 = "./dist";
 
 const srcFolder = "./src";
 
